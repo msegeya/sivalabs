@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions 
+	PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="guestViewLayout" template="/jsp/tiles/guest_view_layout.jsp">
+		<put-attribute name="title" value="SivaLabs" />
+		<put-attribute name="header" value="/jsp/tiles/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/jsp/tiles/footer.jsp" />
+	</definition>
+	
+	<definition name="baseLayout" template="/jsp/tiles/layout.jsp">
+		<put-attribute name="title" value="SivaLabs" />
+		<put-attribute name="header" value="/jsp/tiles/header.jsp" />
+		<put-attribute name="module_links" value="/jsp/tiles/module_links.jsp" />		
+		<put-attribute name="navigation" value="/jsp/tiles/navigation.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="news" value="/jsp/tiles/news.jsp" />
+		<put-attribute name="footer" value="/jsp/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="login" extends="guestViewLayout">
+		<put-attribute name="title" value="SivaLabs : Login" />
+		<put-attribute name="navigation" value="" />
+		<put-attribute name="body" value="/jsp/login.jsp" />
+	</definition>
+
+	<definition name="welcome" extends="baseLayout">
+		<put-attribute name="title" value="SivaLabs : Welcome" />
+		<put-attribute name="body" value="/jsp/welcome.jsp" />
+	</definition>
+
+	<definition name="showUsers" extends="baseLayout">
+		<put-attribute name="title" value="SivaLabs : Welcome" />
+		<put-attribute name="body" value="/jsp/administration/showUsers.jsp" />
+	</definition>
+
+	<definition name="newUser" extends="baseLayout">
+		<put-attribute name="title" value="SivaLabs : Welcome" />
+		<put-attribute name="body" value="/jsp/administration/newUser.jsp" />
+	</definition>
+
+	<definition name="editUser" extends="baseLayout">
+		<put-attribute name="title" value="SivaLabs : Welcome" />
+		<put-attribute name="body" value="/jsp/administration/editUser.jsp" />
+	</definition>
+	
+	<definition name="view_roles" extends="baseLayout">
+		<put-attribute name="title" value="SivaLabs : Welcome" />
+		<put-attribute name="body" value="/jsp/administration/view_roles.jsp" />
+	</definition>
+	
+	
+	
+</tiles-definitions>
